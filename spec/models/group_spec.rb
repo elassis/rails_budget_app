@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-  subject { Group.new(name:'necessary',icon:'link-to-logo',user_id:1) }
+  subject { Group.new(name: 'necessary', icon: 'link-to-logo', user_id: 1) }
   before { subject.save }
   it 'should not be valid if name is nil' do
     subject.name = nil

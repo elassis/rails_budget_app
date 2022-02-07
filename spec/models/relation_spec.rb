@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Relation, type: :model do
-  subject { Relation.new(group_id:1,expense_id:1) }
+  subject { Relation.new(group_id: 1, expense_id: 1) }
   before { subject.save }
   it 'should be invalid if group_id is nil' do
     subject.group_id = nil
