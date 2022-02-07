@@ -13,3 +13,72 @@
  *= require_tree .
  *= require_self
  */
+ @font-face{
+   font-family: "Proxima Nova";
+   src: url('/assets/Proxima-Nova-Font')
+ }
+ /*login css*/
+ body{
+   margin:0;
+   padding: 0;
+ }
+ .login-navbar{
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3778c2;
+  width: 95%;
+  height: 8vh;
+ }
+ .section-one{
+  display: flex;
+  width: 57%;
+  justify-content: space-between;
+  align-items: center;
+ }
+ .button-login{
+  position: absolute;
+    top: 43px;
+    left: 350px;
+    
+ }
+ .button-login > input, .button-signup > input {
+  border: none;
+  background-color: #3778c2;
+  color: white;
+  font-size: 16px;
+  font-family: "Proxima Nova";
+ }
+ .button-signup{
+  position: absolute;
+  top: 43px;
+  left: 345px;
+ }
+ 
+ .back-button,.login-h2{
+   color: white;
+   font-family: "Proxima Nova","Arial";
+ }
+ .field{
+   margin-top: 10px;
+ }
+ .field > input{
+  padding: 10px;
+    width: 94%;
+    margin: auto;
+    display: block;
+    border-radius: 3px;
+    border: none;
+ }
+ .forgot-password{
+  display: inline-block;
+    text-align: center;
+    width: 100%;
+ }
+ .forgot-password > a{
+   color:grey;
+   text-decoration: none;
+   font-family: "Proxima Nova","Arial";
+ }
+ 
