@@ -1,59 +1,57 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Budget Web App
 
-> One paragraph statement about the project.
+> This is a Ruby on rails web application where the user can register his expenses and organize it by categories and know how much of his budget is expending in what.
 
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
+- Ruby on Rails
+- Devise
+- Rspec
+- CanCanCan
+- Capybara
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- Ruby
+- Rails
+- RubyGems
 
 ### Setup
-
+- Clone the Repository
+```
+git clone <REPO-NAME>
+```
+- Go the root directory
+```
+cd rails_budget_app
+```
 ### Install
-
+- Install Dependencies
+```
+bundle install
+```
 ### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Run rails server
+```
+rails s
+```
 
 ## Authors
 
-👤 **Author1**
+👤 **Enmanuel Lassis**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- [GitHub](https://github.com/elassis)
+- [LinkedIn](https://linkedin.com/in/enmanuel-lassis-pena)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+## 🧠 UI Designer Credit 📝
+- [Gregoire Vella](https://www.behance.net/gregoirevella)
 
 ## 🤝 Contributing
 
