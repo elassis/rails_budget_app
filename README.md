@@ -4,6 +4,8 @@
 
 > This is a Ruby on rails web application where the user can register his expenses and organize it by categories and know how much of his budget is expending in what.
 
+## LIVE APP link 👀
+[HERE!](https://protected-anchorage-45932.herokuapp.com/)
 
 ## Built With
 
@@ -50,7 +52,8 @@ rails s
 - [GitHub](https://github.com/elassis)
 - [LinkedIn](https://linkedin.com/in/enmanuel-lassis-pena)
 
-## 🧠 UI Designer Credit 📝
+## 🧠 Acknowledgements 📝
+### Credits to the UI designer 
 - [Gregoire Vella](https://www.behance.net/gregoirevella)
 
 ## 🤝 Contributing
