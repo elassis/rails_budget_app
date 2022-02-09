@@ -1,0 +1,22 @@
+<nav class="login-navbar">
+  <%= button_to 'back', user_groups_path, method: :get %>
+  <div class="section-one">
+    <h2 class="login-h2">NEW CATEGORY</h2>
+  </div>  
+</nav>
+<%= form_for :group, url: user_groups_path do |f| %>
+  <div  class="field">
+    <%= f.text_field :name, placeholder: 'name' %>
+  </div>
+ 
+  <div  class="field">
+    <%= f.text_field :icon, placeholder: 'icon' %>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :user_id, value: @current_user.id.to_s %>
+  </div>
+  <p class="button-login">
+    <%= f.submit 'Save category'%>
+  </p>
+<% end %>

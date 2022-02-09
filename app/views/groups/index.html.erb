@@ -1,0 +1,24 @@
+<nav class="login-navbar">
+  <div class="section-one">
+    <h2 class="login-h2">CATEGORIES</h2>
+  </div>
+  <%= button_to 'sign out', signout_path, method: :get %>
+</nav>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<section class="categories-body">
+  <% @categories.each do |c|%>
+    <div class="category-container" onclick="location.href='<%= user_group_expenses_path(:user_id=> @current_user.id,:group_id => c.id) %>'">
+      <div class="img-container">
+        <img class="icon-img" src=<%= c.icon %> alt-text='icon-img'>
+      </div>
+      <div class="category-text">
+        <p class="title"><%= c.name %></p>
+        <p class="transaction">transactions: <%= c.expenses_total %></p>
+      </div>
+    </div>
+  <% end %>
+</section>
+<p class="btn-categories">
+  <%= button_to 'add new category', new_user_group_path(@current_user.id), method: :get %>
+</p>

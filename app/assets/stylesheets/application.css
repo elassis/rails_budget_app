@@ -1,0 +1,210 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url('/assets/Proxima-Nova-Font');
+}
+/* stylelint-disable*/
+/* login css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  font-family: "Proxima Nova", "Arial";
+}
+/* stylelint-enable*/
+
+.login-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3778c2;
+  width: 100vw;
+  height: 10vh;
+}
+
+.section-one {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.button-login > input,
+.button-signup > input,
+.signin-welcome {
+  border: none;
+  background-color: #3778c2;
+  color: white;
+  font-size: 16px;
+  display: block;
+  margin: 17px auto;
+  padding: 10px;
+}
+
+.back-button,
+.login-h2 {
+  color: white;
+}
+
+.login-h2 {
+  margin: auto;
+}
+
+.field {
+  margin-top: 10px;
+}
+
+.field > input {
+  padding: 10px;
+  width: 94%;
+  margin: auto;
+  display: block;
+  border-radius: 3px;
+  border: none;
+}
+
+.forgot-password {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.forgot-password > a {
+  color: grey;
+  text-decoration: none;
+}
+
+/* categories index css */
+.categories-body,
+.expenses-body {
+  height: 75vh;
+}
+
+.category-container,
+.expense-container {
+  display: flex;
+  gap: 20px;
+  text-transform: capitalize;
+  color: grey;
+  background-color: white;
+  width: 350px;
+  height: 100px;
+  margin: 10px auto;
+  padding: 9px;
+}
+
+.category-text > .title {
+  color: black;
+  font-weight: 600;
+}
+
+.img-container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.img-container > img {
+  width: 100%;
+  height: auto;
+}
+
+.button_to > input {
+  display: block;
+  margin: auto;
+  text-transform: capitalize;
+  padding: 10px;
+  border: none;
+  background-color: #3778c2;
+  color: white;
+  font-size: 18px;
+}
+
+/* transactions index */
+.trans-counter {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 18px;
+  color: grey;
+}
+
+.expense-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.expense-container > .description {
+  width: 50%;
+}
+
+/* transactions new css */
+.categories-label {
+  text-align: center;
+  font-size: 18px;
+  color: grey;
+  margin-top: 24px;
+}
+
+/* welcome css */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  height: 100vh;
+  gap: 10px;
+}
+
+.welcome-container > .title {
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-container > .title > h1 {
+  margin: 50% auto;
+  text-transform: capitalize;
+}
+
+.welcome-container > .links {
+  height: 30%;
+}
+
+.signin-welcome {
+  border-radius: 5px;
+}
+
+.signin-welcome > a,
+.signup-welcome > a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.signup-welcome > a {
+  color: grey;
+}
+
+@media (min-width: 800px) {
+  .welcome-container > .title > h1 {
+    margin: 20% auto;
+  }
+
+  .expense-container,
+  .category-container {
+    width: 500px;
+  }
+}
