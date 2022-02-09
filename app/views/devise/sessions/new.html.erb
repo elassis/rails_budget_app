@@ -1,10 +1,10 @@
 <nav class="login-navbar">
   <div class="section-one">
-    <p class="back-button">&#10092;</p>
     <h2 class="login-h2">LOGIN</h2>
-  </div>
-  
+  </div>  
 </nav>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">

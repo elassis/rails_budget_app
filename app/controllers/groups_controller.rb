@@ -1,8 +1,11 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!, except: :welcome
   def index
     @current_user = current_user
     @categories = @current_user.all_categories(current_user.id)
   end
+
+  def welcome; end
 
   def new
     @current_user = current_user

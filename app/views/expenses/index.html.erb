@@ -1,16 +1,23 @@
-<%= button_to 'back', user_groups_path, method: :get %>
-<p>total: <%= @total_expenses %> </p>
-<% @expenses.each do |e|%>
-  <div class="expense-container">
-    <div class="img-container">
-      <img src=<%= e.group.icon %>>
+<nav class="login-navbar">
+  <%= button_to 'back', user_groups_path, method: :get %>
+  <div class="section-one">
+    <h2 class="login-h2">TRANSACTIONS</h2>
+  </div>  
+</nav>
+<p class="trans-counter">total: <%= @total_expenses %> </p>
+<section class="expenses-body">
+  <% @expenses.each do |e|%>
+    <div class="expense-container">
+      <div class="img-container">
+        <img src=<%= e.group.icon %>>
+      </div>
+      <div class="description">
+        <p><%= e.expense.name%></p>
+      </div>
+      <div class="amount">
+        <p>$ <%= e.expense.amount %></p>
+      </div>
     </div>
-    <div>
-      <p><%= e.expense.name%></p>
-    </div>
-    <div>
-      <p><%= e.expense.amount %></p>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+</section>
 <%= button_to 'add new transaction', new_user_group_expense_path, method: :get %>

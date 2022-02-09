@@ -41,7 +41,7 @@ RSpec.describe 'User Validation', type: :system do
       sleep(1)
       click_button('Log in')
       sleep(3)
-      expect(page).to have_current_path(root_path)
+      expect(page).to have_content('CATEGORIES')
     end
   end
 end

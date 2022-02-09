@@ -1,22 +1,25 @@
-<%= button_to 'back', user_group_expenses_path, method: :get %>
+<nav class="login-navbar">
+  <%= button_to 'back', user_group_expenses_path, method: :get %>
+  <div class="section-one">
+    <h2 class="login-h2">NEW TRANSACTION</h2>
+  </div>  
+</nav>
 <%= form_for :expense, url: user_group_expenses_path do |f| %>
   <div class="field">
     <%= f.hidden_field :author_id, value: @current_user.id.to_s %>
   </div>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p> 
-  <p>
-    <%= f.label :amount %><br>
-    <%= f.number_field :amount %>
-  </p>
-  <strong>Categories</strong><br>
+  <div class="field">
+    <%= f.text_field :name, placeholder: 'name' %>
+  </div> 
+  <div class="field">
+    <%= f.number_field :amount, placeholder: 'amount' %>
+  </div>
+  <p class="categories-label">Categories</p><br>
   <%= f.collection_check_boxes(:relations, Group.all.where(user_id:params[:user_id]), :id, :name)%>
   <div class="field">
     <%= f.hidden_field :user_id, value: @current_user.id.to_s %>
   </div>
-  <p>
+  <p class="button-login">
     <%= f.submit 'Save transaction'%>
   </p>
 <% end %>

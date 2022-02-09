@@ -1,4 +1,5 @@
 class ExpensesController < ApplicationController
+  before_action :authenticate_user!
   def index
     @current_user = current_user
     @group = Group.find(params[:group_id])
@@ -37,7 +38,5 @@ class ExpensesController < ApplicationController
 
   def expense_params
     params.require(:expense).permit(:author_id, :name, :amount, :user_id)
-    # hash.merge(relations:params[:relations])
-    # hash
   end
 end
