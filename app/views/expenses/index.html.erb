@@ -1,0 +1,17 @@
+<%= button_to 'back', user_groups_path, method: :get %>
+<p>total: <%= @total_expenses %> </p>
+<% @expenses.each do |e|%>
+  <div class="expense-container">
+    <div class="img-container">
+      <img src=<%= e.group.icon %>>
+    </div>
+    <div>
+      <p><%= e.expense.name%></p>
+      <p><%= e.expense.created_at %></p>
+    </div>
+    <div>
+      <p><%= e.expense.amount %></p>
+    </div>
+  </div>
+<% end %>
+<%= button_to 'add new transaction', new_user_group_expense_path, method: :get %>

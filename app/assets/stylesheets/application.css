@@ -81,4 +81,14 @@
    text-decoration: none;
    font-family: "Proxima Nova","Arial";
  }
+ .category-container, .expense-container{
+  display: flex;
+  padding: 0 20px;
+  margin: 10px 0;
+  gap:20px;
+ }
+ .img-container{
+  width: 25%;
+  background-color: #e0e0e0;
+ }
  
