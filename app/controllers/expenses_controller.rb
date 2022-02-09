@@ -17,7 +17,7 @@ class ExpensesController < ApplicationController
     @current_user = current_user
 
     if relations.length <= 1
-      flash[:notice] = 'Something went wrong try again'
+      flash[:notice] = 'Something went wrong. try again'
       redirect_to new_user_group_expense_path
     else
       begin
@@ -26,7 +26,6 @@ class ExpensesController < ApplicationController
           Relation.create!(group_id: g, expense_id: @new_expense.id) if g != ''
         end
       rescue StandardError
-        # mssg
         redirect_to new_user_group_expense_path
       else
         redirect_to user_group_expenses_path
