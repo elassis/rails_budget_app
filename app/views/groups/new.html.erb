@@ -4,7 +4,7 @@
     <h2 class="login-h2">NEW CATEGORY</h2>
   </div>  
 </nav>
-<%= form_for :group, url: user_groups_path do |f| %>
+<%= form_for :group, :html => {:class => "new_category_form"}, url: user_groups_path do |f| %>
   <div  class="field">
     <%= f.text_field :name, placeholder: 'name' %>
   </div>

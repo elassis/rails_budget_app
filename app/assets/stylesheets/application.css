@@ -29,17 +29,18 @@ body {
 
 .login-navbar {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: #3778c2;
   width: 100vw;
   height: 10vh;
+  
 }
 
 .section-one {
   display: flex;
-  width: 100%;
-  align-items: center;
+  text-align: left;
 }
 
 .button-login > input,
@@ -52,15 +53,14 @@ body {
   display: block;
   margin: 17px auto;
   padding: 10px;
+  width:150px;
+  border-radius: 5px;
 }
 
 .back-button,
 .login-h2 {
   color: white;
-}
-
-.login-h2 {
-  margin: auto;
+  margin: 0 auto;
 }
 
 .field {
@@ -90,7 +90,8 @@ body {
 /* categories index css */
 .categories-body,
 .expenses-body {
-  height: 75vh;
+  height: 60vh;
+  overflow: auto;
 }
 
 .category-container,
@@ -126,11 +127,14 @@ body {
   display: block;
   margin: auto;
   text-transform: capitalize;
-  padding: 10px;
   border: none;
   background-color: #3778c2;
   color: white;
-  font-size: 18px;
+  font-size: 14px;
+}
+.button_to > input[value="add new category"],input[value="add new transaction"]{
+  padding:10px;
+  border-radius: 5px;
 }
 
 /* transactions index */
@@ -181,6 +185,8 @@ body {
 
 .welcome-container > .links {
   height: 30%;
+  width: 200px;
+  margin:auto;
 }
 
 .signin-welcome {
@@ -199,6 +205,9 @@ body {
 }
 
 @media (min-width: 800px) {
+  nav.login-navbar{
+    width: 100vw;
+  }
   .welcome-container > .title > h1 {
     margin: 20% auto;
   }
@@ -206,5 +215,9 @@ body {
   .expense-container,
   .category-container {
     width: 500px;
+  }
+  form#new_user,form.new_category_form,form.new_expense_form{
+    width: 300px;
+    margin: auto;
   }
 }

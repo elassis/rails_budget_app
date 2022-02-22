@@ -4,7 +4,7 @@
     <h2 class="login-h2">NEW TRANSACTION</h2>
   </div>  
 </nav>
-<%= form_for :expense, url: user_group_expenses_path do |f| %>
+<%= form_for :expense, :html => {:class => 'new_expense_form'}, url: user_group_expenses_path do |f| %>
   <div class="field">
     <%= f.hidden_field :author_id, value: @current_user.id.to_s %>
   </div>
