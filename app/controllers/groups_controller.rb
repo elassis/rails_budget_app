@@ -5,7 +5,11 @@ class GroupsController < ApplicationController
     @categories = @current_user.all_categories(current_user.id)
   end
 
-  def welcome; end
+  def welcome
+    set_meta_tags og:{
+      image: "https://live.staticflickr.com/65535/51899757706_ab3053cd3f_z.jpg"
+    }
+  end
 
   def new
     @current_user = current_user
